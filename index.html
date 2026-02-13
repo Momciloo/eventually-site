@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="e-v-e-n-t-u-a-l-l-y.css" />
-    <title>Eventually</title>
+    <title>Eventually | Revisit your saved tweets</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -74,9 +74,10 @@
     <script>
       const sentence = "Bet you have hundreds of saved tweets. Use Eventually to actually revisit them.";
       const words = sentence.split(" ");
+      const initialTitle = document.title;
       function updateTitleFromScroll() {
-        if (window.scrollY === 0) {
-          document.title = "Eventually";
+        if (window.scrollY < 50) {
+          document.title = initialTitle;
           return;
         }
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
