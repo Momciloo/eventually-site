@@ -1,39 +1,50 @@
-body,
-*:before,
-*:after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+::selection {
+  background: #fffd01;
+  color: #000;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #fffd01;
+  color: #000;
+  text-shadow: none;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #f5efea;
-  color: #333333;
+  background-color: #fff;
+  color: #000;
   text-align: center;
 }
 
-p {
-  margin: 0;
-}
-
-.y {
+shell {
+  display: block;
   max-width: 1236px;
   margin: 0 auto;
 }
 
-h1 {
+masthead {
+  display: block;
   font-size: 27px;
   margin-bottom: 4vh;
   line-height: 1.19;
   margin-top: 20vh;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-h2 {
+hero {
+  display: block;
   font-size: clamp(3.75rem, 1.0714rem + 8.5714vw, 7.5rem);
   font-style: normal;
   font-variation-settings: normal;
@@ -44,7 +55,7 @@ h2 {
   margin-top: 0;
 }
 
-h2 svg {
+hero svg {
   width: clamp(3.125rem, 0.8929rem + 7.1429vw, 6.25rem);
   height: clamp(3.125rem, 0.8929rem + 7.1429vw, 6.25rem);
   display: inline-block;
@@ -52,19 +63,83 @@ h2 svg {
   top: 10px;
 }
 
-section p {
+wrap {
+  display: inline-block;
+}
+
+balloon {
+  display: inline-block;
+  background: none;
+  padding: 0;
+  color: inherit;
+  cursor: cell;
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: 20px;
+  margin-right: -20px;
+}
+
+balloon img {
+  pointer-events: none;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+#balloon-2,
+#balloon-3,
+#balloon-4 {
+  display: none;
+}
+
+balloon:hover #balloon {
+  display: none;
+}
+
+balloon:hover #balloon-2 {
+  display: inline-block !important;
+}
+
+balloon:active #balloon-2 {
+  display: none !important;
+}
+
+balloon:active #balloon-3 {
+  display: inline-block !important;
+}
+
+balloon:focus:not(:active) #balloon,
+balloon:focus:not(:active) #balloon-2 {
+  display: none !important;
+}
+
+balloon:focus:not(:active) #balloon-3 {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+balloon:focus:not(:active) #balloon-4 {
+  display: inline-block !important;
+}
+
+#balloon {
+  display: inline-block;
+}
+
+cta blurb {
   font-size: 16px;
   opacity: 0.4;
   display: block;
   margin: 20px 0;
 }
 
-section a,
-address a,
-nav a {
+cta action,
+actions action {
   font-size: 22px;
-  color: #f5efea;
-  background: #333333;
+  color: #fff;
+  background: #000;
   padding: 20px 40px;
   border-radius: 20px;
   display: inline-block;
@@ -72,22 +147,36 @@ nav a {
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: all 0.3s ease-out;
+  transition: all 0.17s ease-out;
   transform: scale(1);
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
-nav strong,
-section small {
+cta action:hover,
+actions action:hover {
+  transform: scale(1.05);
+}
+
+cta note {
   display: block;
 }
 
-article p,
-article blockquote,
-aside em,
-figure p, figure figcaption {
+story heading {
+  display: block;
+  margin: 0;
+  font-weight: 599;
+  font-feature-settings: normal;
+  font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  letter-spacing: -0.78px;
+  line-height: 1.05;
+  text-align: center;
+  padding: 80px 0;
+}
+
+story quote {
+  display: block;
+  margin: 0;
   font-feature-settings: normal;
   font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
   font-style: normal;
@@ -97,4 +186,139 @@ figure p, figure figcaption {
   line-height: 1.05;
   text-align: center;
   padding: 80px 0;
+}
+
+callout emphasis {
+  font-feature-settings: normal;
+  font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  font-weight: 599;
+  letter-spacing: -0.78px;
+  line-height: 1.05;
+  text-align: center;
+  padding: 80px 0;
+  display: block;
+}
+
+panel lede {
+  font-feature-settings: normal;
+  font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  font-weight: 599;
+  letter-spacing: -0.78px;
+  line-height: 1.05;
+  text-align: center;
+  padding: 80px 0;
+}
+
+panel prose {
+  margin: 0;
+  font-feature-settings: normal;
+  font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  font-weight: 599;
+  letter-spacing: -0.78px;
+  line-height: 1.05;
+  text-align: center;
+  padding: 80px 0;
+  display: block;
+  font-family: inherit;
+}
+
+actions subline {
+  display: block;
+}
+
+footlinks dot {
+  vertical-align: baseline;
+  font-size: 1em;
+  font-family: inherit;
+  background: none;
+  padding: 0;
+}
+
+saved {
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+}
+
+saved img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  position: relative;
+  top: 20px;
+  left: 0;
+  margin-right: -20px;
+}
+
+pad {
+  display: block;
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 280px 0;
+  margin: 80px 0;
+  height: 800px;
+}
+
+story {
+  display: block;
+}
+
+callout {
+  display: block;
+}
+
+panel {
+  display: block;
+}
+
+actions {
+  display: block;
+}
+
+footlinks {
+  display: block;
+}
+
+action {
+  display: inline;
+  color: inherit;
+  text-decoration: underline;
+}
+
+tagline,
+copy {
+  display: block;
+}
+
+brand {
+  font-style: italic;
+}
+
+footlinks {
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+footlinks a {
+  text-decoration: none;
+  color: #000;
+}
+
+footlinks a:hover {
+  text-decoration: underline;
+  text-underline-offset: -4px;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #000;
+  text-decoration-skip-ink: none;
+}
+
+copy, tagline {
+  margin-bottom: 20px;
+  opacity: 0.6;
 }

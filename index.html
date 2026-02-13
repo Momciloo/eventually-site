@@ -6,163 +6,201 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="canonical" href="https://geteventually.com" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="e-v-e-n-t-u-a-l-l-y.css" />
     <title>Eventually</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://geteventually.com/#organization",
+          "name": "Eventually",
+          "url": "https://geteventually.com",
+          "description": "A tiny browser extension that emails you the tweets you meant to come back to, but never did. Turns your saved tweets into a calm, daily email you'll actually read.",
+          "foundingDate": "2026"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://geteventually.com/#website",
+          "name": "Eventually",
+          "url": "https://geteventually.com",
+          "description": "Eventually — a simple extension that turns your dusty pile of saved tweets into a calm, daily email you'll actually read.",
+          "publisher": { "@id": "https://geteventually.com/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://geteventually.com/#software",
+          "name": "Eventually",
+          "applicationCategory": "BrowserApplication",
+          "operatingSystem": "Chrome, Safari",
+          "description": "A tiny browser extension that emails you the tweets you meant to come back to, but never did. No dashboards, no complicated filters — just a small, steady stream of past gems delivered to your inbox. Works with X bookmarks.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "author": { "@id": "https://geteventually.com/#organization" },
+          "url": "https://geteventually.com",
+          "slogan": "Crafted for people with overflowing bookmark folders"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://geteventually.com/#webpage",
+          "url": "https://geteventually.com",
+          "name": "Eventually — Revisit your saved tweets",
+          "description": "Bet you have hundreds of saved tweets. Use Eventually to actually revisit them. A tiny browser extension that emails you the tweets you meant to come back to, but never did.",
+          "isPartOf": { "@id": "https://geteventually.com/#website" },
+          "about": { "@id": "https://geteventually.com/#software" },
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": "https://geteventually.com"
+          }
+        }
+      ]
+    }
+    </script>
+    <script>
+      const sentence = "Bet you have hundreds of saved tweets. Use Eventually to actually revisit them.";
+      const words = sentence.split(" ");
+      function updateTitleFromScroll() {
+        if (window.scrollY === 0) {
+          document.title = "Eventually";
+          return;
+        }
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll <= 0 ? 0 : Math.min(window.scrollY / maxScroll, 1);
+        const index = Math.min(Math.floor(progress * words.length), words.length - 1);
+        document.title = words[index];
+      }
+      window.addEventListener("scroll", updateTitleFromScroll, { passive: true });
+      updateTitleFromScroll();
+    </script>
   </head>
   <body>
-    <div class="e">
-      <div class="v">
-        <div class="e">
-          <div class="n">
-            <div class="t">
-              <div class="u">
-                <div class="a">
-                  <div class="l">
-                    <div class="l">
-                      <div class="y">
-                        <h1>Eventually</h1>
-                        <h2>
-                          Bet you have hundreds of
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="#ff0"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path
-                              d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"
-                            />
-                          </svg>
-                          saved tweets. Use
-                          <i>Eventually</i>
-                          to actually
-                          <span style="display: inline-block">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 22 22"
-                              fill="none"
-                            >
-                              <path
-                                fill="#F5C4C6"
-                                stroke="currentColor"
-                                d="m1.5 14.5 2 5 1.5 1 3 .5 1.5-1 1.5-1h.5l1.5 1.5h3.5l2-1L19 17l1-1 1-2-.5-2.5-1-2 .5-2L18.5 5 17 3.5l-1.5-2h-2l-3 .5L8 1 5.5 2 3 5.5 1.5 10v4.5Z"
-                              />
-                              <path
-                                fill="currentColor"
-                                d="M13.22.077a4 4 0 0 1 4.732 3.32c.466.197.902.463 1.29.793a5.002 5.002 0 0 1 1.474 5.466 5.001 5.001 0 0 1 1.113 4.638 5.002 5.002 0 0 1-1.785 2.672l-.046.034a5.005 5.005 0 0 1-1.138 3.172 5.003 5.003 0 0 1-5.545 1.53A5 5 0 0 1 11 19.992 4.999 4.999 0 0 1 2.002 17l-.046-.034a5.003 5.003 0 0 1-1.575-5.88 5.004 5.004 0 0 1 .902-1.43 4.995 4.995 0 0 1 2.764-6.26A4.001 4.001 0 0 1 5.362.993a4.003 4.003 0 0 1 5.074-.167 4 4 0 0 1 .564.53 4.002 4.002 0 0 1 2.22-1.28Zm-4.83 1.96A2.002 2.002 0 0 0 6.269 5a1 1 0 0 1-1.732 1 4.004 4.004 0 0 1-.233-.477A2.997 2.997 0 0 0 3.25 6.796a3.003 3.003 0 0 0-.202 1.74 1 1 0 0 1 .451 1.866 3.001 3.001 0 0 0-.326 4.978A3 3 0 0 0 5 16a1 1 0 0 1 0 2c-.287 0-.572-.026-.852-.075A3 3 0 0 0 10 16.998v-4.92a5.168 5.168 0 0 1-1.72.882 1 1 0 0 1-.56-1.92 3.172 3.172 0 0 0 2.27-2.785l.01-.256v-4a2.002 2.002 0 0 0-1.61-1.961Zm6.128.031a2.002 2.002 0 0 0-2.312 1.047A2.003 2.003 0 0 0 12 4v3.999l.01.256a3.172 3.172 0 0 0 2.27 2.785 1 1 0 0 1-.56 1.92 5.17 5.17 0 0 1-1.72-.881v4.919a3.005 3.005 0 0 0 .95 2.187 3.001 3.001 0 0 0 4.9-1.26c-.279.049-.563.075-.85.075a1 1 0 0 1 0-2 3.001 3.001 0 0 0 1.5-5.598 1 1 0 0 1 .45-1.865 3.003 3.003 0 0 0-1.254-3.014 3.995 3.995 0 0 1-.232.477 1 1 0 0 1-1.731-1 2.003 2.003 0 0 0-.415-2.504 2 2 0 0 0-.8-.428Z"
-                              />
-                            </svg>
-                            revisit
-                          </span>
+    <shell>
+      <masthead>Eventually</masthead>
+      <hero>
+        Bet you have hundreds of
+        <saved>
+          <thumbs>
+            <img
+              draggable="false"
+              src="/save.jpg"
+              alt="balloon"
+            />
+          </thumbs>
+          <badge>saved</badge>
+        </saved>
+        tweets. Use
+        <brand>Eventually</brand>
+        to actually
+        <wrap>
+          <balloon
+            data-balloons
+            role="button"
+            aria-label="Revisit balloon"
+            tabindex="0"
+          >
+            <img
+              draggable="false"
+              id="balloon"
+              src="/bbaalloonn.jpg"
+              alt="balloon"
+            />
+            <img
+              draggable="false"
+              id="balloon-2"
+              src="/bbaalloonn-2.jpg"
+              alt="balloon"
+            />
+            <img
+              draggable="false"
+              id="balloon-3"
+              src="/bbaalloonn-3.jpg"
+              alt="balloon"
+            />
+            <img
+              draggable="false"
+              id="balloon-4"
+              src="/bbaalloonn-4.jpg"
+              alt="balloon"
+            />
+          </balloon>
+          revisit
+        </wrap>
 
-                          them.
-                        </h2>
-                        <section>
-                          <p>
-                            A tiny browser extension that emails you the tweets
-                            you meant to come back to, but never did.
-                          </p>
-                          <a href="#"
-                            >Download Chrome Extension</a
-                          >
-                          <small>
-                            Works with X bookmarks.
-                          </small>
-                        </section>
-                        <article>
-                          <p>
-                            Eventually is a simple extension that turns your
-                            dusty pile of saved tweets into a calm, daily email
-                            you'll actually read.
-                          </p>
-                          <blockquote>
-                            Instead of doom-scrolling to "catch up," you get a
-                            handful of past gems delivered straight to your
-                            inbox — perfectly snackable, perfectly timed.
-                          </blockquote>
-                        </article>
+        them.
+      </hero>
+      <cta>
+        <blurb>
+          A tiny browser extension that emails you the tweets you meant to come
+          back to, but never did.
+        </blurb>
+        <action href="#">Download Chrome Extension</action>
+        <note>Works with X bookmarks.</note>
+      </cta>
+      <pad></pad>
+      <story>
+        <heading>
+          <brand>Eventually</brand> is a simple extension that turns your dusty pile of saved
+          tweets into a calm, daily email you'll actually read.
+        </heading>
+        <quote>
+          Instead of doom-scrolling to "catch up," you get a handful of past
+          gems delivered straight to your inbox — perfectly snackable, perfectly
+          timed.
+        </quote>
+      </story>
 
-                        <aside>
-                          <em>
-                            No dashboards, no complicated filters — just a
-                            small, steady stream of "oh right, that thread!"
-                            arriving in your email.
-                          </em>
-                        </aside>
+      <callout>
+        <emphasis>
+          No dashboards, no complicated filters — just a small, steady stream of
+          "oh right, that thread!" arriving in your email.
+        </emphasis>
+      </callout>
 
-                        <figure>
-                          <figcaption>
-                            Designed for attention-tired brains, Eventually
-                            keeps everything stupid-simple: one click to bookmark,
-                            one email to revisit.
-                          </figcaption>
-                          <p>
-                            It's your personal "later" that <i>eventually</i> shows up, so
-                            you can learn, remember, and act on the things
-                            past-you cared enough to save.
-                          </p>
-                        </figure>
+      <panel>
+        <lede>
+          Designed for attention-tired brains, <brand>Eventually</brand> keeps everything
+          stupid-simple: one click to bookmark, one email to revisit.
+        </lede>
+        <prose>
+          It's your personal "later" that <brand>eventually</brand> shows up, so you
+          can learn, remember, and act on the things past-you cared enough to
+          save.
+        </prose>
+      </panel>
 
-                        <nav aria-label="Download call-to-action">
-                          <a>
-                            Download the extension
-                          </a>
-                          <strong>
-                            Takes less than 5 minutes to set up.
-                          </strong>
-                        </nav>
+      <actions aria-label="Download call-to-action">
+        <action>Download the extension</action>
+        <subline>Takes less than 5 minutes to set up.</subline>
+      </actions>
 
-                        <footer>
-                          <address>
-                            <a href="#download">
-                              Download the extension
-                            </a>
-                          </address>
-                          <menu aria-label="Footer links">
-                            <a href="#appstore">
-                              App Store
-                            </a>
-                            <span>·</span>
-                            <a href="#chromestore">
-                              Chrome Web Store
-                            </a>
-                            <span>·</span>
-                            <a href="#contact">
-                              Contact
-                            </a>
-                            <span>·</span>
-                            <a href="#twitter">
-                              X (FKA Twitter)
-                            </a>
-                            <span>·</span>
-                            <a href="#privacy">
-                              Privacy policy
-                            </a>
-                          </menu>
-                          <cite>
-                            Crafted for people with overflowing bookmark
-                            folders
-                          </cite>
-                          <time>©2024 Eventually</time>
-                        </footer>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <footlinks aria-label="Footer links">
+        <a href="#appstore"> App Store </a>
+        <dot>·</dot>
+        <a href="#chromestore"> Chrome Web Store </a>
+        <dot>·</dot>
+        <a href="#contact">Contact</a>
+        <dot>·</dot>
+        <a href="#twitter">X (FKA Twitter)</a>
+        <dot>·</dot>
+        <a href="#privacy"> Privacy policy </a>
+      </footlinks>
+      <tagline> Crafted for people with overflowing bookmark folders </tagline>
+      <copy>©2026 <brand>Eventually</brand></copy>
+    </shell>
   </body>
 </html>
