@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service – Eventually</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
+    body { max-width: 720px; margin: 0 auto; padding: 1.5rem 1rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .updated { font-size: 0.875rem; color: #666; margin-bottom: 1.5rem; }
+    h2 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    p, ul { margin: 0 0 0.75rem 0; }
+    ul { padding-left: 1.25rem; }
+    a { color: #0ea5e9; }
+    .back { display: inline-block; margin-bottom: 1rem; font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <a class="back" href="#" id="back">← Back</a>
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated: February 2025</p>
+
+  <p>These Terms of Service (“<strong>Terms</strong>”) are a binding agreement between you and Eventually (the extension and related services, “<strong>Eventually</strong>”, “<strong>we</strong>”, “<strong>us</strong>”). By installing, accessing, or using the Eventually browser extension or any related services, you agree to these Terms. If you do not agree, do not use Eventually.</p>
+
+  <h2>1. Description of Service</h2>
+  <p>Eventually is a browser extension that lets you sign in with X (Twitter) and sync your X bookmarks to a backup/sync service. The extension runs on x.com and uses Sign in with X for authentication. Use of X’s services and any X content is subject to X’s own terms and policies.</p>
+
+  <h2>2. Eligibility and Age</h2>
+  <p>You must be at least 13 years old to use Eventually, consistent with the <a href="https://x.com/tos" target="_blank" rel="noopener">X Terms of Service</a>. If you are under 18, you should have your parent or guardian’s permission. We may require you to confirm your age or eligibility.</p>
+
+  <h2>3. Compliance with X’s Terms</h2>
+  <p>Your use of Eventually involves connecting to X and using X content (e.g. bookmarks and related data). You agree to comply with:</p>
+  <ul>
+    <li><a href="https://x.com/tos" target="_blank" rel="noopener">X Terms of Service</a></li>
+    <li><a href="https://x.com/privacy" target="_blank" rel="noopener">X Privacy Policy</a></li>
+    <li>Any applicable <a href="https://developer.x.com/developer-terms/agreement" target="_blank" rel="noopener">X Developer Agreement</a> and <a href="https://developer.x.com/developer-terms/policy" target="_blank" rel="noopener">X Developer Policy</a> that apply to services that integrate with or display X content.</li>
+  </ul>
+  <p>We do not use the X API in a way that would make the full X Developer Agreement apply to end users; however, we respect X’s rules on privacy, consent, and acceptable use. You may not use Eventually to violate X’s terms or policies or to misuse X content.</p>
+
+  <h2>4. Your Obligations</h2>
+  <p>You agree to:</p>
+  <ul>
+    <li>Use Eventually only in a lawful way and in accordance with these Terms and applicable law.</li>
+    <li>Not use the service to harass, abuse, spam, or harm others, or to infringe anyone’s rights.</li>
+    <li>Not attempt to reverse engineer, disrupt, or compromise the extension or our systems.</li>
+    <li>Provide accurate information where required (e.g. in connection with sign-in).</li>
+  </ul>
+
+  <h2>5. Privacy</h2>
+  <p>Your use of Eventually is also governed by our <a href="/privacy">Privacy Policy</a>, which describes what we collect, how we use it, and how we share it (including with X and our service providers). By using Eventually, you consent to that processing.</p>
+
+  <h2>6. Disclaimers</h2>
+  <p>EVENTUALLY AND THE EXTENSION ARE PROVIDED “AS IS” AND “AS AVAILABLE.” WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE. YOUR USE OF X AND ANY THIRD-PARTY SERVICES IS AT YOUR OWN RISK.</p>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE (AND OUR AFFILIATES, OFFICERS, AND EMPLOYEES) SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF DATA, REVENUE, OR PROFITS, ARISING FROM YOUR USE OF EVENTUALLY. OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US IN THE 12 MONTHS BEFORE THE CLAIM, OR (B) ONE HUNDRED US DOLLARS (USD $100). SOME JURISDICTIONS DO NOT ALLOW CERTAIN LIMITATIONS; IN SUCH CASES OUR LIABILITY IS LIMITED TO THE MAXIMUM PERMITTED BY LAW.</p>
+
+  <h2>8. Changes and Termination</h2>
+  <p>We may change these Terms from time to time by posting an updated version in the extension or on our website. Continued use after changes constitutes acceptance. We may suspend or terminate your access to Eventually at any time, with or without cause or notice.</p>
+
+  <h2>9. General</h2>
+  <p>These Terms constitute the entire agreement between you and us regarding Eventually. If any part of these Terms is held invalid, the rest remains in effect. Our failure to enforce any right is not a waiver. You may not assign these Terms without our consent. These Terms are governed by the laws of the United States and the State of Delaware, without regard to conflict of law rules. Any dispute will be resolved in the courts of the State of Delaware or the federal courts sitting there.</p>
+
+  <h2>10. Contact</h2>
+  <p>For questions about these Terms, contact us at the address or email provided in our <a href="/privacy">Privacy Policy</a>.</p>
+
+  <script>
+    document.getElementById('back').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getBackgroundPage) {
+        window.close();
+      } else {
+        history.back();
+      }
+    });
+  </script>
+</body>
+</html>
