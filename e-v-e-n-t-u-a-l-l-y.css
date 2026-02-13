@@ -1,0 +1,100 @@
+body,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f5efea;
+  color: #333333;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.y {
+  max-width: 1236px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 27px;
+  margin-bottom: 4vh;
+  line-height: 1.19;
+  margin-top: 20vh;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(3.75rem, 1.0714rem + 8.5714vw, 7.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  font-weight: 599;
+  letter-spacing: -1.2px;
+  line-height: 1.05;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h2 svg {
+  width: clamp(3.125rem, 0.8929rem + 7.1429vw, 6.25rem);
+  height: clamp(3.125rem, 0.8929rem + 7.1429vw, 6.25rem);
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
+section p {
+  font-size: 16px;
+  opacity: 0.4;
+  display: block;
+  margin: 20px 0;
+}
+
+section a,
+address a,
+nav a {
+  font-size: 22px;
+  color: #f5efea;
+  background: #333333;
+  padding: 20px 40px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 20px auto 10px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+nav strong,
+section small {
+  display: block;
+}
+
+article p,
+article blockquote,
+aside em,
+figure p, figure figcaption {
+  font-feature-settings: normal;
+  font-size: clamp(2.75rem, 1.0714rem + 5.7143vw, 5.5rem);
+  font-style: normal;
+  font-variation-settings: normal;
+  font-weight: 599;
+  letter-spacing: -0.78px;
+  line-height: 1.05;
+  text-align: center;
+  padding: 80px 0;
+}
